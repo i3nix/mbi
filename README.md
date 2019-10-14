@@ -1,6 +1,7 @@
 # mbi
 
 [CMake 3.8](https://cmake.org/download/) required!  
+C++17 required!  
 Contains [yaml-cpp](https://github.com/jbeder/yaml-cpp) and [rabbitmq-c](https://github.com/alanxz/rabbitmq-c) libraries  
 
 Build:  
