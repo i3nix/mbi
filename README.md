@@ -1,7 +1,7 @@
 # mbi
 
-CMake 3.8 required!  
-Contains yaml-cpp and rabbitmq-c libraries  
+[CMake 3.8](https://cmake.org/download/) required!  
+Contains [yaml-cpp](https://github.com/jbeder/yaml-cpp) and [rabbitmq-c](https://github.com/alanxz/rabbitmq-c) libraries  
 
 Build:  
 ```
