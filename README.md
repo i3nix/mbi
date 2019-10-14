@@ -11,12 +11,15 @@ cd build
 cmake ..  
 ```
 
-MSVS:  
+MSVS:
  - build generated mbi-proj solution  
+ 
 Unix:
  - idk yet  
+ 
 MacOS:
- - idk yet
+ - idk yet  
+ 
 Other:
  - not tested, might work  
  
