@@ -37,4 +37,4 @@ mbi <file1> <file2> ... <fileN>
 ```
  sends all the files to RabbitMQ server  
  
-MBI uses AMQP_URL environment variable to connect to RabbitMQ server
+mbi uses AMQP_URL environment variable to connect to RabbitMQ server
