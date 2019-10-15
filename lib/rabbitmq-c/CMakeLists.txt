@@ -258,7 +258,7 @@ if (POPT_FOUND AND XmlTo_FOUND)
 endif()
 
 
-option(BUILD_SHARED_LIBS "Build rabbitmq-c as a shared library" ON)
+option(BUILD_SHARED_LIBS "Build rabbitmq-c as a shared library" OFF)
 option(BUILD_STATIC_LIBS "Build rabbitmq-c as a static library" ON)
 
 option(BUILD_EXAMPLES "Build Examples" ON)

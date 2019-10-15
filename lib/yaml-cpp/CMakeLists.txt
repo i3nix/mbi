@@ -20,7 +20,7 @@ cmake_dependent_option(YAML_CPP_INSTALL
   "Enable generation of yaml-cpp install targets" ON
   "CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR" OFF)
 cmake_dependent_option(YAML_BUILD_SHARED_LIBS
-  "Build yaml-cpp shared library" OFF
+  "Build yaml-cpp shared library" ON
   "BUILD_SHARED_LIBS" OFF)
 
 cmake_dependent_option(YAML_MSVC_SHARED_RT
