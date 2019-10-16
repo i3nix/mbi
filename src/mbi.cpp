@@ -124,6 +124,7 @@ int main(int argc, char** argv)
 				if (!filesystem::exists(pth))
 				{
 					cout << argv[t] << " not found!" << endl;
+					client.Disconnect();
 					return -1;
 				}
 				ProcessRMQ(argv[t], client);
