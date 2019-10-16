@@ -2,6 +2,7 @@
 #include <amqp_tcp_socket.h>
 #include <iostream>
 #include "../examples/utils.h"
+#include <amqp_time.h>
 
 RMQClient::RMQClient() : mSocket(NULL), mConnection(amqp_new_connection())
 {}
@@ -13,13 +14,23 @@ void RMQClient::Connect(char* url)
 {
 	amqp_connection_info info;
 	int x = amqp_parse_url(url, &info);
+	if (x == AMQP_STATUS_BAD_URL)
+	{
+		std::cout << "Coul not parse URL" << std::endl;
+		exit(1);
+	}
+
 	mSocket = amqp_tcp_socket_new(mConnection);
 	
 	if (!mSocket)
 		die("Could not create TCP socket");
 	std::cout << "TCP socket created" << std::endl;
+	
+	timeval timeout;
+	timeout.tv_usec = 0;
+	timeout.tv_sec = 5;
 
-	if (amqp_socket_open(mSocket, info.host, info.port))
+	if (amqp_socket_open_noblock(mSocket, info.host, info.port, &timeout))
 		die("Could not open TCP socket");
 	std::cout << "TCP socket opened" << std::endl;
 
