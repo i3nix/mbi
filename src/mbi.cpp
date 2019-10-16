@@ -98,6 +98,11 @@ int main(int argc, char** argv)
 
 			RMQClient client;
 			char* env = ::getenv("AMQP_URL");
+			if (!env)
+			{
+				cout << "AMQP_URL environment variable not set!" << endl;
+				return -1;
+			}
 			client.Connect(env);
 			
 			ProcessRMQ("final.yml", client);
@@ -106,6 +111,11 @@ int main(int argc, char** argv)
 		}
 		else {
 			char* env = ::getenv("AMQP_URL");
+			if (!env)
+			{
+				cout << "AMQP_URL environment variable not set!" << endl;
+				return -1;
+			}
 			RMQClient client;
 			client.Connect(env);
 			for (size_t t = 1; t < argc; t++)
