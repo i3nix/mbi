@@ -79,13 +79,14 @@ int main(int argc, char** argv)
 	try {
 		if (argc == 1)
 		{
-			if (!filesystem::exists(default_dir))
+			filesystem::path pth(default_dir);
+			if (!filesystem::exists(pth))
 			{
 				cout << "migrations directory does not exist!" << endl;
 				return -1;
 			}
 			set<string> files;
-			for (auto& f : filesystem::directory_iterator(default_dir))
+			for (auto& f : filesystem::directory_iterator(pth))
 				files.insert(f.path().string());
 			MBIClass mbi;
 			for (set<string>::iterator it = files.begin(); it != files.end(); it++)
@@ -109,7 +110,8 @@ int main(int argc, char** argv)
 			client.Connect(env);
 			for (size_t t = 1; t < argc; t++)
 			{
-				if (!filesystem::exists(argv[t]))
+				filesystem::path pth(argv[t]);
+				if (!filesystem::exists(pth))
 				{
 					cout << argv[t] << " not found!" << endl;
 					return -1;
