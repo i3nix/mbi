@@ -32,6 +32,7 @@ After this modify some environment variables:
 export LDFLAGS="-L/usr/local/Cellar/llvm/9.0.0/lib"  
 export CPPFLAGS="-I/usr/local/Cellar/llvm/9.0.0/include"  
 export PATH="/usr/local/Cellar/llvm/9.0.0/bin:$PATH" >> ~/.bash_profile"  
+export MACOSX_DEPLOYMENT_TARGET=10.15  
 ```
 And now build:
 ```
