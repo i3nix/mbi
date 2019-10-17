@@ -6,7 +6,7 @@ Contains [yaml-cpp](https://github.com/jbeder/yaml-cpp) and [rabbitmq-c](https:/
 
 # Build
 
-MSVS:  
+### MSVS:  
 ```
 mkdir build  
 cd build  
@@ -14,14 +14,14 @@ cmake ..
 ```
 and build generated mbi-proj solution  
  
-g++(g++-9 or later):  
+### g++(g++-9 or later):  
 I was used to tell CMake to use correct g++ version, maybe it will not be necessary for you  
 ```
 mkdir build  
 cd build  
 cmake .. -DCMAKE_CXX_COMPILER=g++-9
 ```
-Clang++:  
+### Clang++:  
 Here I should make some preparations, which can be different. Of cource, maybe it also will not be necessary for you.  
 Install LLVM(probably 7.0.1+, tested for 9.0.0), it can take some time:  
 ```
