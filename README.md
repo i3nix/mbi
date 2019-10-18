@@ -1,4 +1,4 @@
-# mbi
+# mbi (message broker initializer)  
 
 [CMake 3.8](https://cmake.org/download/) required!  
 C++17 required!  
